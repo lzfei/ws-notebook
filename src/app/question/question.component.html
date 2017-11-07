@@ -1,3 +1,25 @@
-<p>
-  question works!
-</p>
+<div class="container">
+<div class="pic-outer">
+    <ul>
+      <li *ngFor="let nav of data" class="nav-first" (click)="change(nav)">{{nav.name}}
+        <ul *ngIf="nav.children" class="nav-second">
+          <li *ngFor="let nav1 of nav.children">
+            <span *ngIf="parentId == nav1.parentid">{{nav1.name}}</span>
+            <ul *ngIf="nav1.children" class="nav-third">
+              <li *ngFor="let nav2 of nav1.children">
+                <span *ngIf="parentId2 == nav2.parentid">{{nav2.name}}</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!--<select #selectValue (change)="changeValue(selectValue.value)">
+    <option value="1">苹果</option>
+    <option value="2">桃子</option>
+    <option value="3">香蕉</option>
+  </select>-->
+
+
+</div>

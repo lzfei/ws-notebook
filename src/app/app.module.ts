@@ -9,8 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { CommonComponent } from './common/common.component';
 import { TopComponent } from './common/top/top.component';
 import { FootComponent } from './common/foot/foot.component';
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { QuestionComponent } from './question/question.component';
+
+import { ZoomingPicDirective } from './common/directive/zooming-pic';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { QuestionComponent } from './question/question.component';
     CommonComponent,
     TopComponent,
     FootComponent,
-    QuestionComponent
+    QuestionComponent,
+    ZoomingPicDirective
   ],
   imports: [
     BrowserModule,
